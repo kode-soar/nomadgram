@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\kodes\\.virtualenvs\\nomadgram-iSJ6IgZ0\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\kodes\\.virtualenvs\\nomadgram-iSJ6IgZ0\\Scripts\\python.exe",
+    "python.formatting.provider": "black"
 }
