@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from nomadgram.users import views as user_views
+from nomadgram import views as views
 #from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
@@ -18,7 +19,7 @@ urlpatterns = [
     path("images/", include("nomadgram.images.urls", namespace="images")),
     path("notifications/", include("nomadgram.notifications.urls", namespace="notifications")),
     path("rest-auth/facebook/", user_views.FacebookLogin.as_view(), name='fb_login'),
-    # Your stuff: custom urls includes go here
+    path("", views.ReactAppView.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
